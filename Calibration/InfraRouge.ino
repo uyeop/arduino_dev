@@ -58,10 +58,7 @@ void setup(){
 /*********************************************/
 
 /********Fonction MAIN *********************/
-void loop(){
-  Init_Com();
-  
-  
+void loop(){  
   for(int scan=0; scan<(nbSensor/2); scan++){
     int sensorRow = sensorBin[scan];
     int s0 = sensorRow & 0x01;
@@ -70,10 +67,10 @@ void loop(){
     digitalWrite(sD0, s0);
     digitalWrite(sD1, s1);
     digitalWrite(sD2, s2);       
-    sensorMatrix[scan]=analogRead(readM1);
-    sensorMatrix[scan+nbSensor/2]=analogRead(readM2);        
+    sensorMatrix[scan]=analogRead(readM1); //first line
+    //sensorMatrix[scan+nbSensor/2]=analogRead(readM2);  //2nd line       
   }  
-  Thresholding(sensorMatrix);  
+  Thresholding(sensorMatrix,nbSensor);  
   
   //Détermination du temps de balayage et d'envoi des données:
   /*time=micros();

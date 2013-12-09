@@ -8,5 +8,5 @@ void Calibration(unsigned int reference[nbSensor])
     //nbLoop=nbSensor/8;
     trame[i]=0x00;
   }
-  Serial.println(nbLoop);
+  //Serial.println(nbLoop);
 }
