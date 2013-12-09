@@ -34,7 +34,7 @@ Projet GORRE
 char startC='G'; //Start byte
 char stopC ='E';  //Stop Byte
 byte trame[256];
-unsigned int sensorBin[8] = {000, 001, 010, 011, 100, 101, 110, 111};  //Sensors locations (8) 
+unsigned int sensorBin[8] = {0, 1, 2, 3, 4, 5, 6, 7};  //Sensors locations (8) 
 unsigned int sensorMatrix[nbSensor];
 unsigned int sensorMatrixReference[nbSensor];
 int nbLoop;
